@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Image Caption Generator</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="neon-grid-bg"></div>
+
+  <div class="container">
+    <div class="social-border">
+      <a href="https://github.com/hrishikaranjan" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/hrishika-ranjan-8b188a300/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <header>
+      <h1><i class="fas fa-wand-magic-sparkles"></i> AI Image Caption Generator</h1>
+      <p class="subtitle">Upload an image, generate a caption with AI, and save it for later.</p>
+    </header>
+
+    <main>
+      <div class="uploader">
+        <input type="file" id="imageInput" accept="image/*" hidden>
+        <label for="imageInput" class="btn btn-outline">
+          <i class="fas fa-upload"></i> Choose Image
+        </label>
+        <button id="generateBtn" class="btn"><i class="fas fa-magic"></i> Generate Caption</button>
+      </div>
+
+      <div id="preview" class="preview">
+        <div class="placeholder">
+          <i class="far fa-image"></i>
+          <span>No image selected</span>
+        </div>
+      </div>
+
+      <div id="captionCard" class="caption-card hidden">
+        <div class="caption-header">
+          <h2><i class="far fa-comment-dots"></i> Caption</h2>
+          <div class="actions">
+            <button id="copyBtn" class="icon-btn" title="Copy to clipboard"><i class="far fa-copy"></i></button>
+            <button id="downloadBtn" class="icon-btn" title="Download .txt"><i class="fas fa-download"></i></button>
+            <button id="saveLocalBtn" class="icon-btn" title="Save to browser for later"><i class="far fa-bookmark"></i></button>
+          </div>
+        </div>
+        <p id="captionText" class="caption-text"></p>
+      </div>
+
+      <section class="history hidden" id="historySection">
+        <h3><i class="fas fa-clock-rotate-left"></i> Saved Captions</h3>
+        <div id="historyList" class="history-list"></div>
+        <button id="clearHistoryBtn" class="btn btn-outline danger"><i class="fas fa-trash"></i> Clear Saved</button>
+      </section>
+    </main>
+
+<footer>
+  <small>Built with ❤️ — Hrishika Ranjan || Copyright © Hrishikaranjan. All rights reserved 2025</small>
+</footer>
+  </div>
+
+  <script src="static/app.js"></script>
+</body>
+</html>
+
