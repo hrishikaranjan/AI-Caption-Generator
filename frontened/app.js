@@ -1,5 +1,5 @@
 // ====== CONFIG ======
-const CAPTION_ENDPOINT = "http://127.0.0.1:8000/api/caption";
+const CAPTION_ENDPOINT = "https://ai-caption-generator-bjxl.onrender.com/api/caption";
 
 // ====== ELEMENTS ======
 const imageInput = document.getElementById("imageInput");
